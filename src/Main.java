@@ -11,15 +11,24 @@ public class Main {
         ArithExpr constant8 = new Constant(8.3);
         ArithExpr constant9 = new Constant(9.1);
 
+        // Instanciation des constantes
+        ArithExpr A = new Constant(3.0);
+        ArithExpr B = new Constant(4.7);
+        ArithExpr C = new Constant(2.3);
+        ArithExpr D = new Constant(5.0);
+
         // Creation des expressions de constantes (essai)
         ArithExpr expression1 = new Addition(constant1, constant2);
         ArithExpr expression2 = new Soustraction(constant1, constant2);
 
         // Creation de l'expression : 3 + (4.7 + 2.3) * 5
-        ArithExpr expression = new;
+         ArithExpr expression = new Addition(constant1, new Multiplication(new Addition(constant2, constant3), constant4));
+
+        // Affichage de l'expression (essai)
+        System.out.println(expression1 + " = " + expression1.eval());
+        System.out.println(expression2 + " = " + expression2.eval());
 
         // Affichage de l'expression
-        System.out.println("Evaluation result: " + expression1.eval());
-        System.out.println("Evaluation result: " + expression2.eval());
+        System.out.println(expression + " = " + expression.eval());
     }
 }
