@@ -1,14 +1,16 @@
-public class Addition implements ArithExpr {
-    private ArithExpr left;
-    private ArithExpr right;
+public class Addition extends OperArith {
 
     public Addition(ArithExpr left, ArithExpr right) {
-        this.left = left;
-        this.right = right;
+        super(left, right);
     }
 
     @Override
     public double eval() {
         return left.eval() + right.eval();
+    }
+
+    @Override
+    public String toString() {
+        return "(" + left.toString() + " + " + right.toString() + ")";
     }
 }

@@ -1,8 +1,15 @@
-public class Soustraction implements ArithExpr{
-    private ArithExpr left;
-    private ArithExpr right;
+public class Soustraction extends OperArith{
+    public Soustraction(ArithExpr left, ArithExpr right) {
+        super(left, right);
+    }
+
     @Override
     public double eval() {
-        return 0;
+        return left.eval() - right.eval();
+    }
+
+    @Override
+    public String toString() {
+        return "(" + left.toString() + " - " + right.toString() + ")";
     }
 }
