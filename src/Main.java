@@ -22,7 +22,7 @@ public class Main {
         ArithExpr expression2 = new Soustraction(constant1, constant2);
 
         // Creation de l'expression : 3 + (4.7 + 2.3) * 5
-         ArithExpr expression = new Addition(constant1, new Multiplication(new Addition(constant2, constant3), constant4));
+        ArithExpr expression = new Addition(A, new Multiplication(new Addition(B, C), D));
 
         // Affichage de l'expression (essai)
         System.out.println(expression1 + " = " + expression1.eval());
